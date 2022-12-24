@@ -80,6 +80,7 @@ const animationTimeline = () => {
       0.7,
       {
         opacity: 0,
+        y: 10
       },
     "+=2")
     .from(".fake-btn", 0.3, {
