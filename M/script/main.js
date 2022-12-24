@@ -1,6 +1,7 @@
-resolveFetch().then(function() {
-  animationTimeline();
+window.addEventListener('load', () => {
+  resolveFetch().then(animationTimeline());
 });
+
 
 
 
