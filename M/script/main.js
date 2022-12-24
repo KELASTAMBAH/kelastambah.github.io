@@ -1,4 +1,7 @@
-resolveFetch().then(animationTimeline());
+resolveFetch().then(function() {
+  animationTimeline();
+});
+
 
 
 // animation timeline
