@@ -76,13 +76,6 @@ const animationTimeline = () => {
       scale: 0.2,
       opacity: 0,
     })
-    .to(".four",
-      0.7,
-      {
-        opacity: 0,
-        y: 10
-      },
-    "+=2")
     .from(".fake-btn", 0.3, {
       scale: 0.2,
       opacity: 0,
