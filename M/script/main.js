@@ -1,3 +1,4 @@
+resolveFetch().then(animationTimeline());
 
 
 // animation timeline
