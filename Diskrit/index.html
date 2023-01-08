@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Pertanyaan Diskrit</title>
+    <title>Pertanyaan</title>
     <style>
       body {
         text-align: center;
@@ -33,13 +33,13 @@
     </style>
   </head>
   <body>
-    <h1>Apakah Anda suka mata kuliah Matematika Diskrit?</h1>
+    <h1>Apakah Anda suka musik?</h1>
     <button id="button-yes" onclick="showPicture()">Ya</button>
     <button id="button-no" onclick="moveButton()" disabled>Tidak</button>
     <br>
     <br>
     <div id="picture" style="display:none">
-      <img src="gambar.webp" alt="Gambar Senyum">
+      <img src="gambar.webp" alt="Gambar Musik">
       <br>
       <audio src="tawa.mp3" autoplay></audio>
     </div>
@@ -47,7 +47,6 @@
   <script>
     function showPicture() {
       document.getElementById("picture").style.display = "block";
-      hideButtons();
     }
     function moveButton() {
       var buttonNo = document.getElementById("button-no");
