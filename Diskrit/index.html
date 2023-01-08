@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pertanyaan</title>
+	<style>
+		body {
+			background-color: lightblue;
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		h1 {
+			color: navy;
+			margin: 20px 0;
+		}
+
+		#gambar {
+			display: none;
+			border: 10px solid navy;
+			border-radius: 50%;
+			margin: 20px 0;
+		}
+
+		#tidak {
+			position: absolute;
+			color: white;
+			background-color: navy;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+
+		#ya {
+			color: white;
+			background-color: green;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Apakah Anda suka musik?</h1>
+	<button id="ya">Ya</button>
+	<button id="tidak">Tidak</button>
+	<br>
+	<img id="gambar" src="">
+	<audio id="musik" src=""></audio>
+	<script>
+		const yaButton = document.getElementById('ya');
+		const tidakButton = document.getElementById('tidak');
+		const gambar = document.getElementById('gambar');
+		const musik = document.getElementById('musik');
+		let left = 0;
+		const screenWidth = window.innerWidth;
+	  
+		yaButton.addEventListener('click', function() {
+		  gambar.style.display = 'block';
+		  gambar.src = 'gambar.webp';
+		  musik.src = 'tawa.mp3';
+		  musik.play();
+		});
+	  
+		tidakButton.addEventListener('click', function() {
+		  const moveLeft = Math.random() < 0.5;
+		  left = moveLeft ? left - 100 : left + 100;
+		  tidakButton.style.left = left + 'px';
+	  
+		  if (left < 0) {
+			tidakButton.style.left = '0px';
+		  } else if (left + tidakButton.offsetWidth > screenWidth) {
+			tidakButton.style.left = (screenWidth - tidakButton.offsetWidth) + 'px';
+		  }
+		});
+	  </script>
+	  
+</body>
+</html>
+
