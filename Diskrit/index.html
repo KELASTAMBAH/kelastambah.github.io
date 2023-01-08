@@ -64,8 +64,8 @@
 		});
 	  
 		tidakButton.addEventListener('click', function() {
-		  const moveLeft = Math.random() < 0.5;
-		  left = moveLeft ? left - 100 : left + 100;
+		  const moveLeft = Math.random() < 0.1;
+		  left = moveLeft ? left - 10 : left + 10;
 		  tidakButton.style.left = left + 'px';
 	  
 		  if (left < 0) {
