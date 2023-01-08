@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Pertanyaan Diskrit</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #button-yes {
+        background-color: lightgreen;
+        border: 1px solid green;
+      }
+      #button-no {
+        background-color: pink;
+        border: 1px solid red;
+      }
+      #picture {
+        margin: 20px 0;
+      }
+      img {
+        width: 500px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Apakah Anda suka mata kuliah Matematika Diskrit?</h1>
+    <button id="button-yes" onclick="showPicture()">Ya</button>
+    <button id="button-no" onclick="moveButton()" disabled>Tidak</button>
+    <br>
+    <br>
+    <div id="picture" style="display:none">
+      <img src="gambar.webp" alt="Gambar Senyum">
+      <br>
+      <audio src="tawa.mp3" autoplay></audio>
+    </div>
+  </body>
+  <script>
+    function showPicture() {
+      document.getElementById("picture").style.display = "block";
+      hideButtons();
+    }
+    function moveButton() {
+      var buttonNo = document.getElementById("button-no");
+      var x = Math.floor((Math.random() * window.innerWidth) + 1);
+      var y = Math.floor((Math.random() * window.innerHeight) + 1);
+      buttonNo.style.top = x + "px";
+      buttonNo.style.left = y + "px";
+      setTimeout(moveButton, 500);
+    }
+  </script>
+</html>
