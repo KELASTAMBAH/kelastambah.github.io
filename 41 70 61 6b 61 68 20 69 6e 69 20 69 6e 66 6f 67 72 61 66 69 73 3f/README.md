@@ -1,2 +1,0 @@
-# CSV Graph
-Tugas Milisdad.
